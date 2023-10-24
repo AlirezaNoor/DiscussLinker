@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Reddit';
+
+  formsubmit(Title:HTMLInputElement,Link:HTMLInputElement){
+console.log(`${Title.value} ++++${Link.value}`)
+  }
 }

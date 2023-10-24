@@ -1,0 +1,23 @@
+<div class="container mt-5 mb-3">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card">
+
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <div class="bg-light p-4 col-lg-3">
+              <h5>{{LikeCounter}}</h5>
+              <div>points</div>
+            </div>
+            <div class="col-lg-3">
+              <h5>{{title}}</h5>
+              <a href="">{{Link}}</a>
+            </div>
+          </div>
+          <button class="btn btn-primary mx-2 mt-2" (click)="upbote()">like</button>
+          <button class="btn btn-danger mx-2 mt-2" (click)="downvote()">dislike</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
