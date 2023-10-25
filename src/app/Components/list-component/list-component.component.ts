@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {identity} from "rxjs";
 
 @Component({
   selector: 'app-list-component',
@@ -6,19 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./list-component.component.css']
 })
 export class ListComponentComponent {
-title:string;
-Link:string;
-LikeCounter:number;
-constructor() {
-  this.title="Angular";
-  this.Link="www.Angular.io";
-  this.LikeCounter=10
-}
-  upbote(){
-  this.LikeCounter+=this.LikeCounter;
-  //this.likecounter=likecounter-1
+ Title:string;
+ Link:string;
+ Likecounter:number;
+ constructor() {
+   this.Title="Angular";
+   this.Link="Angular.io";
+   this.Likecounter=10
+ }
+
+  upvote(){
+   console.warn("this is like button")
   }
   downvote(){
-    this.LikeCounter-=this.LikeCounter;
+   console.warn("this is dislike button")
   }
 }
