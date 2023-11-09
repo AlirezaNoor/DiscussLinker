@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {identity} from "rxjs";
+import {Art} from "../../../../Model/art";
 
 @Component({
   selector: 'app-list-component',
@@ -7,19 +8,15 @@ import {identity} from "rxjs";
   styleUrls: ['./list-component.component.css']
 })
 export class ListComponentComponent {
- Title:string;
- Link:string;
- Likecounter:number;
+ art:Art;
  constructor() {
-   this.Title="Angular";
-   this.Link="Angular.io";
-   this.Likecounter=10
+  this.art=new Art("Angular","www.angular.io",5);
  }
 
   upvote(){
-   console.warn("this is like button")
+   this.art.upvote()
   }
   downvote(){
-   console.warn("this is dislike button")
+    this.art.downvote()
   }
 }
